@@ -1,16 +1,19 @@
+// ignore_for_file: file_names, must_be_immutable
+
 import 'package:flutter/material.dart';
 
 class MyAppBAr extends StatelessWidget {
   String title;
   bool isDetails;
-  MyAppBAr({required this.title, required this.isDetails});
+  MyAppBAr({Key? key, required this.title, required this.isDetails})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(18, 8.0, 16, 0),
-        child: Container(
+        child: SizedBox(
           height: 56,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
